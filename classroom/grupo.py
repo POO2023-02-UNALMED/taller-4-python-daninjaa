@@ -3,10 +3,14 @@ from classroom.asignatura import Asignatura
 class Grupo:
     grado = None
 
-    def __init__(self, grupo="grupo predeterminado", asignaturas = [], estudiantes = [], grado = "Grado 12"):
+    def __init__(self, grupo="grupo predeterminado", asignaturas = None, estudiantes = None, grado = "Grado 12"):
         self._grupo = grupo
         self._asignaturas = asignaturas
+        if self._asignaturas is None:
+            self._asignaturas = []
         self.listadoAlumnos = estudiantes
+        if self.listadoAlumnos is None:
+            self.listadoAlumnos = []
         self.listadoAlumnos.sort()
         Grupo.grado = grado
 
