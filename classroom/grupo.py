@@ -11,7 +11,6 @@ class Grupo:
         self.listadoAlumnos = estudiantes
         if self.listadoAlumnos is None:
             self.listadoAlumnos = []
-        self.listadoAlumnos.sort()
         Grupo.grado = grado
 
     def listadoAsignaturas(self, **kwargs):
