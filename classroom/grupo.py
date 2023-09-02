@@ -21,8 +21,9 @@ class Grupo:
         if lista is None:
             lista = []
         lista.append(alumno)
+        lista.sort()
         self.listadoAlumnos = self.listadoAlumnos + lista
-        self.listadoAlumnos.sort()
+        
         
 
     def __str__(self):
